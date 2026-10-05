@@ -31,3 +31,5 @@ Installer les dépendances avec `pip install -r requirements.txt`. Dans le dossi
 ## Livrables
 
 La documentation, les guides français et anglais et la présentation initiale sont disponibles dans ce dépôt. Les scripts Python et le dossier `templates` sont consultables sur GitHub. `ventilometre-sources.zip` fournit aussi une copie organisée du code. Les données d’exemple sont fictives et la clé météo se configure localement. [Vidéo de soutenance](https://github.com/LORENZI-Bastien/SAE-2.3-Ventilometre/releases/tag/v1.0).
+
+`students.db` contient une base de démonstration avec des données fictives. `reset_db.py` permet de la reconstruire.
