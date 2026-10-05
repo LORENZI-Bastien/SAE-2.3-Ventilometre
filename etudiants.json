@@ -1,0 +1,15 @@
+[
+  {
+    "nom": "EXEMPLE",
+    "prenom": "Alex",
+    "groupe": "DEMO",
+    "residences": [
+      {
+        "adresse": "Adresse fictive",
+        "ville": "Montbeliard",
+        "date_debut": "2025-01-01",
+        "date_fin": null
+      }
+    ]
+  }
+]
