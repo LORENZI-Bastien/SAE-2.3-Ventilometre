@@ -1,35 +1,46 @@
-# SAÉ 2.3 — Le ventilomètre
+# SAÉ 2.3 · Le ventilomètre
 
-Projet de première année de BUT Réseaux et Télécommunications à Montbéliard.
+> Application web qui affiche le vent du jour dans les villes de résidence des étudiants, avec historique des recherches et vent médian collectif.
 
-## Objectif
+| | |
+|---|---|
+| **Formation** | BUT Réseaux et Télécommunications, Montbéliard |
+| **Année** | 1<sup>re</sup> année, semestre 2 |
+| **Organisation** | En équipe de 3 |
+| **Outils et notions** | `Python` `Flask` `SQLite` `API OpenWeather` `HTML / Jinja` |
 
-Application web permettant de consulter les données de vent associées aux villes de résidence et l’historique des recherches.
+## Fonctionnalités
 
-## Travaux réalisés
+- Recherche d’un étudiant et affichage du vent dans sa ville de résidence
+- Historique des recherches, global et par utilisateur
+- Calcul du vent médian collectif du jour
+- Collecte des données météo par l’API OpenWeather et import des étudiants depuis un fichier JSON
 
-Collecte des données météo, import de données, recherche dans l’interface et calcul du vent médian collectif.
+## Lancer l’application en local
 
-## Outils et technologies
+```bash
+cd code
+pip install -r requirements.txt
+export OPENWEATHER_API_KEY="votre_cle"   # sous Windows : set OPENWEATHER_API_KEY=votre_cle
+python reset_db.py      # recrée la base de démonstration
+python collect_wind.py  # récupère la météo du jour
+python app.py           # puis ouvrir http://127.0.0.1:5000
+```
 
-- Python / Flask
-- SQLite
-- API météo
+La base `students.db` et le fichier `etudiants.json` ne contiennent que des **données fictives**. Aucune clé d’API n’est publiée.
 
-## Organisation
+## Contenu du dépôt
 
-Projet en autonomie.
+```
+code/          application Flask (app.py, scripts, templates, base de démo)
+docs/          guides d’installation et d’utilisation (français et anglais), vue globale
+presentation/  présentation initiale du projet
+```
 
-## Présentation
+- [Guide d’installation](docs/guide-installation.pdf) · [Guide utilisateur](docs/guide-utilisateur.pdf)
+- [Installation guide (EN)](docs/installation-guide-en.pdf) · [User guide (EN)](docs/user-guide-en.pdf)
+- [Vidéo de soutenance](https://github.com/LORENZI-Bastien/SAE-2.3-Ventilometre/releases/tag/v1.0)
 
-[Mon portfolio](https://wonderful-chebakia-f83e9d.netlify.app/#projets)
+---
 
-## Configuration locale
-
-Installer les dépendances avec `pip install -r requirements.txt`. Dans le dossier contenant `app.py`, définir la variable `OPENWEATHER_API_KEY`, puis initialiser la base avec `python reset_db.py`, collecter la météo avec `python collect_wind.py` et lancer `python app.py`. Les données fournies sont fictives. Cette application pédagogique est destinée à une démonstration locale ; son fonctionnement n’a pas été vérifié ici.
-
-## Livrables
-
-La documentation, les guides français et anglais et la présentation initiale sont disponibles dans ce dépôt. Les scripts Python et le dossier `templates` sont consultables sur GitHub. `ventilometre-sources.zip` fournit aussi une copie organisée du code. Les données d’exemple sont fictives et la clé météo se configure localement. [Vidéo de soutenance](https://github.com/LORENZI-Bastien/SAE-2.3-Ventilometre/releases/tag/v1.0).
-
-`students.db` contient une base de démonstration avec des données fictives. `reset_db.py` permet de la reconstruire.
+<sub>Bastien Lorenzi · BUT Réseaux et Télécommunications, parcours cybersécurité · [Portfolio](https://wonderful-chebakia-f83e9d.netlify.app/#projets) · [Profil GitHub](https://github.com/LORENZI-Bastien)</sub>
